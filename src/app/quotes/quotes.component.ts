@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 import { Quote } from '../quote';
 
 @Component({
@@ -7,14 +7,24 @@ import { Quote } from '../quote';
   styleUrls: ['./quotes.component.css']
 })
 export class QuoteComponent implements OnInit {
+
+
+
+constructor() { }
   quotes = [
-    new Quote("MLK", "Martin Luther King", "Injustice anywhere is a threat to justice everywhere."),
-    new Quote("Life", "Margeret Atwood", "In the end we all become stories ")
-  ]
+    new Quote('SamuelNjiiri', 'Dennis Witley', 'Its not what you are that holds you back.Its what you think you are not.'),
+    new Quote('Taneja', 'Greek philosopher', 'Day by day,what we think what we choose, and what we do is who we become.' ),
+    new Quote('Jughead', 'Bob Dylan', 'Destiny is a feeling you have that you know something about yourself that no one else knows'),
+    // tslint:disable-next-line: max-line-length
+    new Quote('Jecinta', 'Jim Rohn', 'Our ultimate life objectives should be to create as much as our talent,ability,and desire will permit')
+  ];
+  preNum: number;
+  lastNum: number;
+  counter: number;
 
 
   addQuote(chosenQuote) {
-    this.quotes.push(chosenQuote)
+    this.quotes.push(chosenQuote);
   }
 
   upvote(i) {
@@ -24,26 +34,19 @@ export class QuoteComponent implements OnInit {
     this.quotes[i].downvotes  ++;
   }
   delQuote(i) {
-    this.quotes.splice(i, 1)
+    this.quotes.splice(i, 1);
   }
-  preNum:number
-  lastNum:number
-  counter:number
 
-  highestUpvote(){
-    this.preNum = 0
-    this.lastNum = 0
+  highestUpvote() {
+    this.preNum = 0;
+    this.lastNum = 0;
 
-    for(this.counter=0 ; this.counter < this.quotes.length; this.counter++) {
+    for (this.counter = 0 ; this.counter < this.quotes.length; this.counter++) {
       this.lastNum = this.quotes[this.counter].upvotes;
-      if(this.lastNum > this.preNum){this.preNum = this.lastNum}
+      if (this.lastNum > this.preNum) {this.preNum = this.lastNum; }
     }
-    return  this.preNum
+    return  this.preNum;
   }
-
-
-
-constructor() { }
 
 ngOnInit() {
 }
