@@ -6,11 +6,23 @@
 text{
   color:black;
 }
-.jumbutron{
-  font-size:30px;
-  color:bisque;
-}
 
+h1{
+  color:bisque;
+  text-align: center;
+}
+.container{
+  height: 300px;
+}
+button{
+  margin: 2rem;
+}
+.card-header{
+background-color: 	#FA8072;
+}
+.card-body{
+ background-color:  #F4A460;
+}
 
 
 
