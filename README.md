@@ -2,7 +2,7 @@
 ####  Created on 21st September 2019, by Jecinta Wanjiru Gathitu.
 
 ## Description.
-#### This is an application that enables viewers to add quotes,to write the author of the quote and to write their names when they add the quote.Also enables the viewers to downvote and upvote existing quotes.This is the link to the project:
+#### This is an application that enables viewers to add quotes,to write the author of the quote and to write their names when they add the quote.Also enables the viewers to downvote and upvote existing quotes.This is the link to the project: https://jecinta534521.github.io/project-quotes/
 
 ## Setup Installation.
 #### The installations used for this app are angularjs,and github.
