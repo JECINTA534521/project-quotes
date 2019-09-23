@@ -33,9 +33,13 @@ constructor() { }
   downvote(i) {
     this.quotes[i].downvotes  ++;
   }
+
   delQuote(i) {
     this.quotes.splice(i, 1);
+
   }
+
+
 
   highestUpvote() {
     this.preNum = 0;
