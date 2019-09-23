@@ -1,4 +1,4 @@
-<div class="jumbotron">
+<div style='background-color:	#8B4513' class="jumbotron">
   <h1>Quotes</h1>
 </div>
 
@@ -14,14 +14,14 @@
         <div class="myQuote" *ngFor="let quote of quotes; let i = index">
           <hr>
           <br>
-            <div class="card">
+            <div class="card text-center">
 
           <div class="card-header">
             <p appHighlight *ngIf="highestUpvote() === quote.upvotes && quote.upvotes > 0">
               {{ quote.quote }}
             </p>
           </div>
-          <div class="card-body">
+          <div class="card-header">
             <p *ngIf="
                     highestUpvote() !== quote.upvotes || quote.upvotes === 0
                   ">
@@ -31,7 +31,7 @@
 
 
 
-          <div class="card-footer">
+          <div class="card-body">
             <app-quotes-detail [quote]="quote"></app-quotes-detail>
 
 
